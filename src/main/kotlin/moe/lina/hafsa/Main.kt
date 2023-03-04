@@ -6,13 +6,15 @@ import dev.kord.core.event.interaction.ButtonInteractionCreateEvent
 import dev.kord.core.event.interaction.GuildChatInputCommandInteractionCreateEvent
 import dev.kord.core.event.interaction.SelectMenuInteractionCreateEvent
 import dev.kord.core.on
+import io.github.cdimascio.dotenv.dotenv
 import moe.lina.hafsa.commands.EditMember
 import moe.lina.hafsa.commands.MemberInfo
 import moe.lina.hafsa.commands.SaveToken
 import moe.lina.hafsa.commands.SystemInfo
 
 suspend fun main(args: Array<String>) {
-    val kord = Kord("MTA4MTI2NTE4NTA0MzUyMTczOA.GiE5Eo.IwveDZKCefh_hT_JjDfOnxcmPoNOjyTeMyYCho")
+    val env = dotenv()
+    val kord = Kord(env["TOKEN"])
 
     val commands = listOf(
         SystemInfo, MemberInfo, EditMember,

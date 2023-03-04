@@ -24,11 +24,11 @@ dependencies {
     implementation("io.ktor:ktor-client-content-negotiation:2.2.3")
     implementation("io.ktor:ktor-serialization-kotlinx-json:2.2.3")
 
-    implementation("io.arrow-kt:arrow-core:1.1.2")
-
     implementation("ch.qos.logback:logback-classic:1.4.5")
-
     implementation("io.ktor:ktor-client-logging-jvm:2.2.3")
+
+    implementation("io.arrow-kt:arrow-core:1.1.2")
+    implementation("io.github.cdimascio:dotenv-kotlin:6.4.1")
 
     testImplementation(kotlin("test"))
 }
